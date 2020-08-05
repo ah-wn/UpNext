@@ -7,6 +7,8 @@
 // @match         http://*
 // @match         https://*
 // @include       https://*
+// @updateURL     https://github.com/ah-wn/UpNext/raw/master/UpNext.user.js
+// @downloadURL   https://github.com/ah-wn/UpNext/raw/master/UpNext.user.js
 // ==/UserScript==
 
 const UpNext = {
