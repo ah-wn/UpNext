@@ -25,7 +25,7 @@ const UpNext = {
       if(that.isScrollAtEnd()){
         run();
       }
-  }, false)},// function recuired for "this"
+  }, false)},// function required for "this"
 };
 
 let i = 0, latch = false;
