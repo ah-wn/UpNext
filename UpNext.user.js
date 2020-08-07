@@ -12,6 +12,7 @@
 // ==/UserScript==
 
 const UpNext = {
+  fetchHTML:(url)=>fetch(url).then(x=>x.text()).then(html=>new DOMParser().parseFromString(html, 'text/html')),
   isScrollAtEnd:()=>{
         const scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
         const scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
