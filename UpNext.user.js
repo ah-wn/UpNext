@@ -13,6 +13,17 @@
 
 const UpNext = {
   fetchHTML:(url)=>fetch(url).then(x=>x.text()).then(html=>new DOMParser().parseFromString(html, 'text/html')),
+  createNextPageButton:(nextURL, title)=>{
+    const text = title || nextURL
+    const link = document.createElement('a');
+          link.href = nextURL;
+          link.innerText = text;
+          link.style.width = '100%';
+          link.style.display = 'inline-block';
+          link.style.fontSize = '30px';
+          link.style.backgroundColor = 'crimson';
+      return link;
+  },
   isScrollAtEnd:()=>{
         const scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
         const scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
